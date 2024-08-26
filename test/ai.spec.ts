@@ -13,6 +13,7 @@ describe("Fetching URL Summary", () => {
     }
   });
 
+  
   it("Fetch the invalid url summary", async () => {
     try {
       const summary = await fetchUrlSummary("asdf", openaiKey);

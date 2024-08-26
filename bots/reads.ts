@@ -4,9 +4,12 @@ import type { Update } from 'telegraf/types';
 import Markup from 'telegraf/markup';
 import { OPENAI_ERROR, fetchUrlSummary } from './ai.js';
 
+
 type ReadsState = 'await_description' | 'await_title' | 'await_url' | 'build' | 'none';
 
+
 type ReadsTag = 'reads' | 'tweets' | 'media' | 'news' | 'podcast' | 'other';
+
 
 type SectorSlug = 'general' | 'finance' | 'infrastructure' | 'macro-markets' | 'metaverse';
 

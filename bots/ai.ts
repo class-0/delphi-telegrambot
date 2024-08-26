@@ -7,6 +7,7 @@ export const fetchUrlSummary = async (url: string, openaiKey: string) => {
   try {
     const openai = new OpenAI({ apiKey: openaiKey });
 
+    
     const chatInput: ChatCompletionCreateParamsNonStreaming = {
       model: "gpt-3.5-turbo",
       messages: [

@@ -1,0 +1,47 @@
+{
+  "name": "delphi-reads-tg-bot",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.ts",
+  "scripts": {
+    "start": "tsx server.ts",
+    "start:dev": "DEV=1 npm start",
+    "deploy": "fly deploy",
+    "deploy:prod": "fly deploy -a delphi-tg-bots-prod -c fly.prod.toml",
+    "logs": "fly logs",
+    "logs:prod": "fly logs -a delphi-tg-bots-prod",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delphidigital/delphi-reads-tg-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delphidigital/delphi-reads-tg-bot/issues"
+  },
+  "homepage": "https://github.com/delphidigital/delphi-reads-tg-bot#readme",
+  "dependencies": {
+    "chai": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-requests-logger": "^4.0.0",
+    "install": "^0.13.0",
+    "mocha": "^10.4.0",
+    "openai": "^4.47.1",
+    "smee-client": "^2.0.1",
+    "telegraf": "^4.16.3",
+    "tsx": "^4.7.3"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.6",
+    "@types/chai": "^4.3.16",
+    "@types/express": "^4.17.21",
+    "@types/express-requests-logger": "^3.0.4",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}

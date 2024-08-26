@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for delphi-tg-bots-beta on 2024-04-29T11:54:00-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'delphi-tg-bots-beta'
+primary_region = 'ewr'
+
+[build]
+
+[env]
+  PORT = '3000'
+  DELPHI_READS_READING_LIST_ID = '9'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
